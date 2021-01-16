@@ -1,5 +1,6 @@
 <template>
     <div>
+        <h1>{{ title }}</h1>
         <p>{{ name }}</p>
         <button @click="updateName">Change Name</button>
     </div>
@@ -7,6 +8,7 @@
 
 <script>
     export default {
+        props: ['title'],
         data() {
             return {name: 'kihwan kim'}
         },

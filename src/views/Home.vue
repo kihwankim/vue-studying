@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>This is homepage</h1>
-    <NewPage></NewPage>
+    <NewPage title="home title"/>
   </div>
 </template>
 
