@@ -1,7 +1,7 @@
 <template>
     <div>
         <label for="Name">Name</label>
-        <input type="text" :value='name' style="pading: 30px;" @input="updateName"/>
+        <input type="text" :value="value" style="pading: 30px;" @input="updateName"/>
     </div>
 </template>
 
