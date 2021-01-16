@@ -8,7 +8,12 @@
 
 <script>
     export default {
-        props: ['title'],
+        props: {
+            'title' : {
+                type: String, // type설정 한다
+                required: true // 무조건 받아야한는 것을 명시
+            }
+        },
         data() {
             return {name: 'kihwan kim'}
         },
