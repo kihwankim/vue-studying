@@ -8,15 +8,15 @@
 <script>
     export default {
         props: {
-            name: {
+            value: {
                 type: String,
                 required: true
             }
         },
         methods: {
             updateName(e) {
-                console.log(e.target.value);
-                this.$emit('update-name', e.target.value) // 부모 컴포넌트로 데이터를 올리는 것
+               
+                this.$emit('input', e.target.value) // 부모 컴포넌트로 데이터를 올리는 것
             }
             // 부모 컴포넌트에서 설정한 event이름 : update-name 그리고 인자 값 : e.target.value가 된다 <!--
             // @input="$emit('update-name', $event.target.value)" 도 가능
