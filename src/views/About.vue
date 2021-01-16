@@ -1,7 +1,18 @@
 <template>
   <div class="about">
     <h1>This is an about page</h1>
-    <NewPage title="about page"/>
+    <NewPage>
+      <template #header="props">
+        <p>header data {{ props.inputData }}</p>
+      </template>
+      <template #default>
+        <p>default place</p>
+      </template>
+      <div>
+        <h1>Hello</h1>
+        <p>Hi</p>
+      </div>
+    </NewPage>
   </div>
 </template>
 
