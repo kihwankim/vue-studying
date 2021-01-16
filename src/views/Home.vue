@@ -1,19 +1,30 @@
 <template>
   <div>
     <h1>This is homepage</h1>
-    <NewPage title="home title"/>
+    <!-- <NewPage title="home title"/> -->
+    <form action="">
+      <InputFields :name="name" @update-name="updateName"/>
+      <button>Submit</button>
+    </form>
+    {{ name }}
   </div>
 </template>
 
 <script>
-    import NewPage from '@/components/NewPage.vue';
+    import InputFields from '@/components/InputFields';
+    // import NewPage from '@/components/NewPage.vue';
     export default {
       components: {
-        NewPage
+        InputFields
       },
       data() {
         return {
-          name: 'kihwan kim'
+          name: ''
+        }
+      },
+      methods: {
+        updateName(name) { // event 이름 설정
+          this.name = name;
         }
       }
     }
